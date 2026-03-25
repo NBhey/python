@@ -45,12 +45,23 @@
 #
 # print((children // 2) * time)
 
-name = input()
-number = int(input())
+# name = input()
+# number = int(input())
+#
+# group = number // 100
+# bed = ((number % 100) - number % 10) // 10
+# number_children = number % 10
+#
+# print(f"Группа №{group}.\n{number_children}. {name}.\nШкафчик: {number}.\nКроватка: {bed}.")
 
-group = number // 100
-bed = ((number % 100) - number % 10) // 10
-number_children = number % 10
 
-print(f"Группа №{group}.\n{number_children}. {name}.\nШкафчик: {number}.\nКроватка: {bed}.")
+number = input()
+output = number[1] + number[0] + number[3] + number[2]
+print(int(output))
 
+first_number = int(number) // 1000
+second_number = int(number) // 100 % 10
+third_number = int(number) // 10 % 10
+fourth_number = int(number) % 10
+
+print(second_number * 1000 + first_number * 100 +  fourth_number * 10 + third_number)
