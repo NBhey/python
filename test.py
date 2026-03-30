@@ -67,24 +67,31 @@
 # print(second_number * 1000 + first_number * 100 +  fourth_number * 10 + third_number)
 
 
-input_number_1 = 45
-input_number_2 = 69
+# input_number_1 = 45
+# input_number_2 = 69
+#
+# input_number_1_num_1 = input_number_1 // 100
+# input_number_2_num_1 = input_number_2 // 100
+#
+# input_number_1_num_2 = input_number_1 // 10 % 10
+# input_number_2_num_2 = input_number_2 // 10 % 10
+#
+# input_number_1_num_3 = input_number_1 % 10
+# input_number_2_num_3 = input_number_2 % 10
+#
+# total_num_1 = (input_number_1_num_1 + input_number_2_num_1) % 10
+# total_num_2 = (input_number_1_num_2 + input_number_2_num_2) % 10
+# total_num_3 = (input_number_1_num_3 + input_number_2_num_3) % 10
+#
+# result_string = str(total_num_1) + str(total_num_2) + str(total_num_3)
+#
+# result = int(result_string)
+# print(result)
 
-input_number_1_num_1 = input_number_1 // 100
-input_number_2_num_1 = input_number_2 // 100
+children = 25
+candies = 500
 
-input_number_1_num_2 = input_number_1 // 10 % 10
-input_number_2_num_2 = input_number_2 // 10 % 10
+total = candies // children
 
-input_number_1_num_3 = input_number_1 % 10
-input_number_2_num_3 = input_number_2 % 10
-
-total_num_1 = (input_number_1_num_1 + input_number_2_num_1) % 10
-total_num_2 = (input_number_1_num_2 + input_number_2_num_2) % 10
-total_num_3 = (input_number_1_num_3 + input_number_2_num_3) % 10
-
-result_string = str(total_num_1) + str(total_num_2) + str(total_num_3)
-
-result = int(result_string)
-print(result)
-
+print(total)
+print(candies - (total * children))
