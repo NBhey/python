@@ -55,13 +55,36 @@
 # print(f"Группа №{group}.\n{number_children}. {name}.\nШкафчик: {number}.\nКроватка: {bed}.")
 
 
-number = input()
-output = number[1] + number[0] + number[3] + number[2]
-print(int(output))
+# number = input()
+# output = number[1] + number[0] + number[3] + number[2]
+# print(int(output))
+#
+# first_number = int(number) // 1000
+# second_number = int(number) // 100 % 10
+# third_number = int(number) // 10 % 10
+# fourth_number = int(number) % 10
+#
+# print(second_number * 1000 + first_number * 100 +  fourth_number * 10 + third_number)
 
-first_number = int(number) // 1000
-second_number = int(number) // 100 % 10
-third_number = int(number) // 10 % 10
-fourth_number = int(number) % 10
 
-print(second_number * 1000 + first_number * 100 +  fourth_number * 10 + third_number)
+input_number_1 = 45
+input_number_2 = 69
+
+input_number_1_num_1 = input_number_1 // 100
+input_number_2_num_1 = input_number_2 // 100
+
+input_number_1_num_2 = input_number_1 // 10 % 10
+input_number_2_num_2 = input_number_2 // 10 % 10
+
+input_number_1_num_3 = input_number_1 % 10
+input_number_2_num_3 = input_number_2 % 10
+
+total_num_1 = (input_number_1_num_1 + input_number_2_num_1) % 10
+total_num_2 = (input_number_1_num_2 + input_number_2_num_2) % 10
+total_num_3 = (input_number_1_num_3 + input_number_2_num_3) % 10
+
+result_string = str(total_num_1) + str(total_num_2) + str(total_num_3)
+
+result = int(result_string)
+print(result)
+
