@@ -111,10 +111,20 @@
 # final_minutes = time_after_arrived % 60
 # print(f'{final_hours:02}:{final_minutes:02}')
 
-A = 10
-B = 32
-C = 5
+# A = 10
+# B = 32
+# C = 5
+#
+# km = B - A
+#
+# print(f"{km / C:.2f}")
 
-km = B - A
+# num_1 = 123
+# num_2 = '1101'
+#
+# print(int(num_2, 2) + num_1)
 
-print(f"{km / C:.2f}")
+num_1 = '101111100'
+num_2 = 500
+
+print(num_2 - int(num_1, 2)  )
