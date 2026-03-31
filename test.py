@@ -88,10 +88,33 @@
 # result = int(result_string)
 # print(result)
 
-children = 25
-candies = 500
+# children = 25
+# candies = 500
+#
+# total = candies // children
+#
+# print(total)
+# print(candies - (total * children))
 
-total = candies // children
 
-print(total)
-print(candies - (total * children))
+# hours = 10
+# minutes = 15
+# arrived_minutes = 2752
+#
+# hours_to_minutes = hours * 60
+#
+# time_before_first_book = hours * 60 + minutes
+#
+# time_after_arrived = time_before_first_book + arrived_minutes
+# time_after_arrived = time_after_arrived % 1440
+# final_hours = time_after_arrived // 60
+# final_minutes = time_after_arrived % 60
+# print(f'{final_hours:02}:{final_minutes:02}')
+
+A = 10
+B = 32
+C = 5
+
+km = B - A
+
+print(f"{km / C:.2f}")
