@@ -147,6 +147,6 @@ M = int(input())
 K_1 = int(input())
 K_2 = int(input())
 
-x = (M * N - N * K_2 ) // (K_1 - K_2)
+x = (M * N - N * K_2) // (K_1 - K_2)
 
-print(x, '', N-x)
+print(x, '', N - x)
