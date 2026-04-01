@@ -129,15 +129,24 @@
 #
 # print(num_2 - int(num_1, 2))
 
-product = input()
-price_product = input()
-weight_product = input()
-money = input()
+# product = input()
+# price_product = input()
+# weight_product = input()
+# money = input()
+#
+# print('================Чек================')
+# print('Товар:', f"{product:>28}")
+# print('Цена:', f"{weight_product + 'кг * ' + price_product + 'руб/кг':>29}")
+# print('Итого:', f"{str(int(price_product) * int(weight_product)) + 'руб':>28}")
+# print('Внесено:', f"{money + 'руб':>26}")
+# print('Сдача:', f"{str(int(money) - int(price_product) * int(weight_product)) + 'руб':>28}")
+# print('===================================')
 
-print('================Чек================')
-print('Товар:', f"{product:>28}")
-print('Цена:', f"{weight_product + 'кг * ' + price_product + 'руб/кг':>29}")
-print('Итого:', f"{str(int(price_product) * int(weight_product)) + 'руб':>28}")
-print('Внесено:', f"{money + 'руб':>26}")
-print('Сдача:', f"{str(int(money) - int(price_product) * int(weight_product)) + 'руб':>28}")
-print('===================================')
+N = int(input())
+M = int(input())
+K_1 = int(input())
+K_2 = int(input())
+
+x = (M * N - N * K_2 ) // (K_1 - K_2)
+
+print(x, '', N-x)
