@@ -124,7 +124,20 @@
 #
 # print(int(num_2, 2) + num_1)
 
-num_1 = '101111100'
-num_2 = 500
+# num_1 = '101111100'
+# num_2 = 500
+#
+# print(num_2 - int(num_1, 2))
 
-print(num_2 - int(num_1, 2)  )
+product = input()
+price_product = input()
+weight_product = input()
+money = input()
+
+print('================Чек================')
+print('Товар:', f"{product:>28}")
+print('Цена:', f"{weight_product + 'кг * ' + price_product + 'руб/кг':>29}")
+print('Итого:', f"{str(int(price_product) * int(weight_product)) + 'руб':>28}")
+print('Внесено:', f"{money + 'руб':>26}")
+print('Сдача:', f"{str(int(money) - int(price_product) * int(weight_product)) + 'руб':>28}")
+print('===================================')
