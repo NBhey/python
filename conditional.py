@@ -29,27 +29,44 @@
 # else:
 #     print('Вася')
 
-petya = int(input())
-vasya = int(input())
-tolya = int(input())
+# petya = int(input())
+# vasya = int(input())
+# tolya = int(input())
+#
+# if petya > vasya and petya > tolya:
+#     print('1. Петя')
+# elif vasya > petya and vasya > tolya:
+#     print('1. Вася')
+# else:
+#     print('1. Толя')
+#
+# if (petya > vasya and petya < tolya) or (petya > tolya and petya < vasya):
+#     print('2. Петя')
+# elif (petya < vasya and vasya < tolya) or (petya > vasya and vasya > tolya):
+#     print('2. Вася')
+# else:
+#     print('2. Толя')
+#
+# if petya < vasya and petya < tolya:
+#     print('3. Петя')
+# elif vasya < petya and vasya < tolya:
+#     print('3. Вася')
+# else:
+#     print('3. Толя')
 
-if petya > vasya and petya > tolya:
-    print('1. Петя')
-elif vasya > petya and vasya > tolya:
-    print('1. Вася')
-else:
-    print('1. Толя')
-
-if (petya > vasya and petya < tolya) or (petya > tolya and petya < vasya):
-    print('2. Петя')
-elif (petya < vasya and vasya < tolya) or (petya > vasya and vasya > tolya):
-    print('2. Вася')
-else:
-    print('2. Толя')
-
-if petya < vasya and petya < tolya:
-    print('3. Петя')
-elif vasya < petya and vasya < tolya:
-    print('3. Вася')
-else:
-    print('3. Толя')
+# petya_apple = 7
+# vasya_apple = 6
+#
+# petya_apple = petya_apple - 3 + 2
+# vasya_apple = vasya_apple + 3 + 5 - 2
+#
+# N = int(input())
+# M = int(input())
+#
+# petya_apple = petya_apple + N
+# vasya_apple = vasya_apple + M
+#
+# if petya_apple > vasya_apple:
+#     print('Петя')
+# else:
+#     print('Вася')
