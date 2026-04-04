@@ -70,3 +70,12 @@
 #     print('Петя')
 # else:
 #     print('Вася')
+
+year = int(input())
+
+if year / 4 == year // 4 and year / 100 != year // 100:
+    print('YES')
+elif year / 4 == year // 4 and year / 100 == year // 100 and year / 400 == year // 400:
+    print('YES')
+else:
+    print('NO')
