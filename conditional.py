@@ -71,11 +71,19 @@
 # else:
 #     print('Вася')
 
-year = int(input())
+# year = int(input())
+#
+# if year / 4 == year // 4 and year / 100 != year // 100:
+#     print('YES')
+# elif year / 4 == year // 4 and year / 100 == year // 100 and year / 400 == year // 400:
+#     print('YES')
+# else:
+#     print('NO')
 
-if year / 4 == year // 4 and year / 100 != year // 100:
-    print('YES')
-elif year / 4 == year // 4 and year / 100 == year // 100 and year / 400 == year // 400:
+number = input()
+palindrome_number = number[3] + number[2] + number[1] + number[0]
+
+if number == palindrome_number:
     print('YES')
 else:
     print('NO')
