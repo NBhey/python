@@ -80,10 +80,17 @@
 # else:
 #     print('NO')
 
-number = input()
-palindrome_number = number[3] + number[2] + number[1] + number[0]
+# number = input()
+# palindrome_number = number[3] + number[2] + number[1] + number[0]
+#
+# if number == palindrome_number:
+#     print('YES')
+# else:
+#     print('NO')
 
-if number == palindrome_number:
+area_string = input()
+
+if 'зайка' in area_string:
     print('YES')
 else:
     print('NO')
