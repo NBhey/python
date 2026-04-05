@@ -88,9 +88,15 @@
 # else:
 #     print('NO')
 
-area_string = input()
+# area_string = input()
+#
+# if 'зайка' in area_string:
+#     print('YES')
+# else:
+#     print('NO')
 
-if 'зайка' in area_string:
-    print('YES')
-else:
-    print('NO')
+name_1 = input()
+name_2 = input()
+name_3 = input()
+
+print(min(name_1, name_2, name_3))
