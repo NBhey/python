@@ -95,8 +95,18 @@
 # else:
 #     print('NO')
 
-name_1 = input()
-name_2 = input()
-name_3 = input()
+# name_1 = input()
+# name_2 = input()
+# name_3 = input()
+#
+# print(min(name_1, name_2, name_3))
 
-print(min(name_1, name_2, name_3))
+number = input()
+
+little_sum = int(number[2]) + int(number[1])
+big_sum = int(number[0]) + int(number[1])
+
+if little_sum > big_sum:
+    print(str(little_sum) + str(big_sum))
+else:
+    print(str(big_sum) + str(little_sum))
