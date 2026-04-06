@@ -101,12 +101,34 @@
 #
 # print(min(name_1, name_2, name_3))
 
+# number = input()
+#
+# little_sum = int(number[2]) + int(number[1])
+# big_sum = int(number[0]) + int(number[1])
+#
+# if little_sum > big_sum:
+#     print(str(little_sum) + str(big_sum))
+# else:
+#     print(str(big_sum) + str(little_sum))
+
+
 number = input()
 
-little_sum = int(number[2]) + int(number[1])
-big_sum = int(number[0]) + int(number[1])
+max_num = max(int(number[2]), int(number[1]), int(number[0]))
+min_num = min(int(number[2]), int(number[1]), int(number[0]))
 
-if little_sum > big_sum:
-    print(str(little_sum) + str(big_sum))
+check_first_num = number[0] not in str(max_num) and number[0] not in str(min_num)
+check_second_num = number[1] not in str(max_num) and number[1] not in str(min_num)
+check_third_num = number[2] not in str(max_num) and number[2] not in str(min_num)
+
+if check_first_num:
+    stable = number[0]
+elif check_second_num:
+    stable = number[1]
 else:
-    print(str(big_sum) + str(little_sum))
+    stable = number[2]
+
+if max_num + min_num == int(stable) * 2:
+    print("YES")
+else:
+    print("NO")
