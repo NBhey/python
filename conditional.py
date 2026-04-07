@@ -134,11 +134,20 @@
 #     print("NO")
 
 
-a = int(input())
-b = int(input())
-c = int(input())
+# a = int(input())
+# b = int(input())
+# c = int(input())
+#
+# if a + b > c and a + c > b and b + c > a:
+#     print('YES')
+# else:
+#     print('NO')
 
-if a + b > c and a + c > b and b + c > a:
-    print('YES')
+elf = input()
+dwarf = input()
+human = input()
+
+if elf[0] == dwarf[0] and elf[0] == human[0]:
+    print(elf[0])
 else:
-    print('NO')
+    print(elf[1])
