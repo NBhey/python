@@ -111,24 +111,34 @@
 # else:
 #     print(str(big_sum) + str(little_sum))
 
+#
+# number = input()
+#
+# max_num = max(int(number[2]), int(number[1]), int(number[0]))
+# min_num = min(int(number[2]), int(number[1]), int(number[0]))
+#
+# check_first_num = number[0] not in str(max_num) and number[0] not in str(min_num)
+# check_second_num = number[1] not in str(max_num) and number[1] not in str(min_num)
+# check_third_num = number[2] not in str(max_num) and number[2] not in str(min_num)
+#
+# if check_first_num:
+#     stable = number[0]
+# elif check_second_num:
+#     stable = number[1]
+# else:
+#     stable = number[2]
+#
+# if max_num + min_num == int(stable) * 2:
+#     print("YES")
+# else:
+#     print("NO")
 
-number = input()
 
-max_num = max(int(number[2]), int(number[1]), int(number[0]))
-min_num = min(int(number[2]), int(number[1]), int(number[0]))
+a = int(input())
+b = int(input())
+c = int(input())
 
-check_first_num = number[0] not in str(max_num) and number[0] not in str(min_num)
-check_second_num = number[1] not in str(max_num) and number[1] not in str(min_num)
-check_third_num = number[2] not in str(max_num) and number[2] not in str(min_num)
-
-if check_first_num:
-    stable = number[0]
-elif check_second_num:
-    stable = number[1]
+if a + b > c and a + c > b and b + c > a:
+    print('YES')
 else:
-    stable = number[2]
-
-if max_num + min_num == int(stable) * 2:
-    print("YES")
-else:
-    print("NO")
+    print('NO')
