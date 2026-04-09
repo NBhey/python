@@ -143,11 +143,43 @@
 # else:
 #     print('NO')
 
-elf = input()
-dwarf = input()
-human = input()
+# elf = input()
+# dwarf = input()
+# human = input()
+#
+# if elf[0] == dwarf[0] and elf[0] == human[0]:
+#     print(elf[0])
+# else:
+#     print(elf[1])
 
-if elf[0] == dwarf[0] and elf[0] == human[0]:
-    print(elf[0])
+number = int('787')
+
+last_number = number % 10
+first_number = (number - last_number) // 100
+second_number = (number - first_number * 100 - last_number) // 10
+
+max_num = max(first_number, second_number, last_number)
+min_num = min(first_number, second_number, last_number)
+
+if str(max_num) in str(first_number):
+    n = max(second_number, last_number)
+elif str(max_num) in str(second_number):
+    n = max(first_number, last_number)
 else:
-    print(elf[1])
+    n = max(first_number, second_number)
+
+result_max = str(max_num) + str(n)
+
+if str(min_num) in str(first_number):
+    m = min(second_number, last_number)
+elif str(min_num) in str(second_number):
+    m = min(first_number, last_number)
+else:
+    m = min(first_number, second_number)
+
+result_min = str(min_num) + str(m)
+
+if int(result_min[0]) == 0:
+    result_min = result_min[1] + result_min[0]
+
+print(result_min, result_max)
