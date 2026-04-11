@@ -152,34 +152,50 @@
 # else:
 #     print(elf[1])
 
-number = int('787')
+# number = int('787')
+#
+# last_number = number % 10
+# first_number = (number - last_number) // 100
+# second_number = (number - first_number * 100 - last_number) // 10
+#
+# max_num = max(first_number, second_number, last_number)
+# min_num = min(first_number, second_number, last_number)
+#
+# if str(max_num) in str(first_number):
+#     n = max(second_number, last_number)
+# elif str(max_num) in str(second_number):
+#     n = max(first_number, last_number)
+# else:
+#     n = max(first_number, second_number)
+#
+# result_max = str(max_num) + str(n)
+#
+# if str(min_num) in str(first_number):
+#     m = min(second_number, last_number)
+# elif str(min_num) in str(second_number):
+#     m = min(first_number, last_number)
+# else:
+#     m = min(first_number, second_number)
+#
+# result_min = str(min_num) + str(m)
+#
+# if int(result_min[0]) == 0:
+#     result_min = result_min[1] + result_min[0]
+#
+# print(result_min, result_max)
 
-last_number = number % 10
-first_number = (number - last_number) // 100
-second_number = (number - first_number * 100 - last_number) // 10
+number_1 = 31
+number_2 = 11
 
-max_num = max(first_number, second_number, last_number)
-min_num = min(first_number, second_number, last_number)
+number_1_first = number_1 // 10
+number_1_second = number_1 % 10
 
-if str(max_num) in str(first_number):
-    n = max(second_number, last_number)
-elif str(max_num) in str(second_number):
-    n = max(first_number, last_number)
-else:
-    n = max(first_number, second_number)
+number_2_first = number_2 // 10
+number_2_second = number_2 % 10
 
-result_max = str(max_num) + str(n)
+max_num = max(number_1_first, number_1_second, number_2_first, number_2_second)
+min_num = min(number_1_first, number_1_second, number_2_first, number_2_second)
 
-if str(min_num) in str(first_number):
-    m = min(second_number, last_number)
-elif str(min_num) in str(second_number):
-    m = min(first_number, last_number)
-else:
-    m = min(first_number, second_number)
+number_average = ((number_1_first + number_1_second + number_2_first + number_2_second) - max_num - min_num) % 10
 
-result_min = str(min_num) + str(m)
-
-if int(result_min[0]) == 0:
-    result_min = result_min[1] + result_min[0]
-
-print(result_min, result_max)
+print(str(max_num) + str(number_average) + str(min_num))
