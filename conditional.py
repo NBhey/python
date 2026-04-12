@@ -184,18 +184,66 @@
 #
 # print(result_min, result_max)
 
-number_1 = 31
-number_2 = 11
+# number_1 = 31
+# number_2 = 11
+#
+# number_1_first = number_1 // 10
+# number_1_second = number_1 % 10
+#
+# number_2_first = number_2 // 10
+# number_2_second = number_2 % 10
+#
+# max_num = max(number_1_first, number_1_second, number_2_first, number_2_second)
+# min_num = min(number_1_first, number_1_second, number_2_first, number_2_second)
+#
+# number_average = ((number_1_first + number_1_second + number_2_first + number_2_second) - max_num - min_num) % 10
+#
+# print(str(max_num) + str(number_average) + str(min_num))
 
-number_1_first = number_1 // 10
-number_1_second = number_1 % 10
+petya = int(input())
+vasya = int(input())
+tolya = int(input())
 
-number_2_first = number_2 // 10
-number_2_second = number_2 % 10
+if petya > vasya and petya > tolya:
+    first_place = petya
+    name_first = "Петя"
+elif petya > vasya and petya < tolya:
+    second_place = petya
+    name_second = "Петя"
+elif petya < vasya and petya > tolya:
+    second_place = petya
+    name_second = "Петя"
+else:
+    third_place = petya
+    name_third = "Петя"
 
-max_num = max(number_1_first, number_1_second, number_2_first, number_2_second)
-min_num = min(number_1_first, number_1_second, number_2_first, number_2_second)
+if vasya > petya and vasya > tolya:
+    first_place = vasya
+    name_first = "Вася"
+elif petya > vasya and vasya > tolya:
+    second_place = vasya
+    name_second = "Вася"
+elif petya < vasya and vasya < tolya:
+    second_place = vasya
+    name_second = "Вася"
+else:
+    third_place = vasya
+    name_third = "Вася"
 
-number_average = ((number_1_first + number_1_second + number_2_first + number_2_second) - max_num - min_num) % 10
+if tolya > petya and vasya < tolya:
+    first_place = tolya
+    name_first = "Толя"
+elif petya > tolya and vasya < tolya:
+    second_place = tolya
+    name_second = "Толя"
+elif tolya < vasya and petya < tolya:
+    second_place = tolya
+    name_second = "Толя"
+else:
+    third_place = tolya
+    name_third = "Толя"
 
-print(str(max_num) + str(number_average) + str(min_num))
+print(f"{'':8}{name_first:^8}{'':8}")
+print(f"{name_second:^8}{'':8}{'':8}")
+print(f"{'':8}{'':8}{name_third:^8}")
+print(f"{'II':^8}{'I':^8}{'III':^8}")
