@@ -17,6 +17,7 @@
 # else:
 #     print('Вася')
 
+
 # speed_Petya = int(input())
 #
 # speed_Vasya = int(input())
@@ -200,50 +201,74 @@
 #
 # print(str(max_num) + str(number_average) + str(min_num))
 
-petya = int(input())
-vasya = int(input())
-tolya = int(input())
+# petya = int(input())
+# vasya = int(input())
+# tolya = int(input())
+#
+# if petya > vasya and petya > tolya:
+#     first_place = petya
+#     name_first = "Петя"
+# elif petya > vasya and petya < tolya:
+#     second_place = petya
+#     name_second = "Петя"
+# elif petya < vasya and petya > tolya:
+#     second_place = petya
+#     name_second = "Петя"
+# else:
+#     third_place = petya
+#     name_third = "Петя"
+#
+# if vasya > petya and vasya > tolya:
+#     first_place = vasya
+#     name_first = "Вася"
+# elif petya > vasya and vasya > tolya:
+#     second_place = vasya
+#     name_second = "Вася"
+# elif petya < vasya and vasya < tolya:
+#     second_place = vasya
+#     name_second = "Вася"
+# else:
+#     third_place = vasya
+#     name_third = "Вася"
+#
+# if tolya > petya and vasya < tolya:
+#     first_place = tolya
+#     name_first = "Толя"
+# elif petya > tolya and vasya < tolya:
+#     second_place = tolya
+#     name_second = "Толя"
+# elif tolya < vasya and petya < tolya:
+#     second_place = tolya
+#     name_second = "Толя"
+# else:
+#     third_place = tolya
+#     name_third = "Толя"
+#
+# print(f"{'':8}{name_first:^8}{'':8}")
+# print(f"{name_second:^8}{'':8}{'':8}")
+# print(f"{'':8}{'':8}{name_third:^8}")
+# print(f"{'II':^8}{'I':^8}{'III':^8}")
+from math import sqrt
 
-if petya > vasya and petya > tolya:
-    first_place = petya
-    name_first = "Петя"
-elif petya > vasya and petya < tolya:
-    second_place = petya
-    name_second = "Петя"
-elif petya < vasya and petya > tolya:
-    second_place = petya
-    name_second = "Петя"
+a = 3.5
+b = -2.4
+c = -7.3
+
+if a == 0:
+    if b == 0 and c == 0:
+        print('Infinite solutions')
+    elif b == 0:
+        print('No solution')
+    else:
+        print(f'{(-c / b):.2f}')
 else:
-    third_place = petya
-    name_third = "Петя"
-
-if vasya > petya and vasya > tolya:
-    first_place = vasya
-    name_first = "Вася"
-elif petya > vasya and vasya > tolya:
-    second_place = vasya
-    name_second = "Вася"
-elif petya < vasya and vasya < tolya:
-    second_place = vasya
-    name_second = "Вася"
-else:
-    third_place = vasya
-    name_third = "Вася"
-
-if tolya > petya and vasya < tolya:
-    first_place = tolya
-    name_first = "Толя"
-elif petya > tolya and vasya < tolya:
-    second_place = tolya
-    name_second = "Толя"
-elif tolya < vasya and petya < tolya:
-    second_place = tolya
-    name_second = "Толя"
-else:
-    third_place = tolya
-    name_third = "Толя"
-
-print(f"{'':8}{name_first:^8}{'':8}")
-print(f"{name_second:^8}{'':8}{'':8}")
-print(f"{'':8}{'':8}{name_third:^8}")
-print(f"{'II':^8}{'I':^8}{'III':^8}")
+    D = (b ** 2) - 4 * a * c
+    if D > 0:
+        x_1 = (-b + sqrt(D)) / (2 * a)
+        x_2 = (-b - sqrt(D)) / (2 * a)
+        print(f'{min(float(x_1), float(x_2)):.2f}', f'{max(float(x_1), float(x_2)):.2f}')
+    elif D == 0:
+        x = (-b) / (2 * a)
+        print(f'{float(x):.2f}')
+    else:
+        print("No solution")
