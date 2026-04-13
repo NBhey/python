@@ -248,27 +248,50 @@
 # print(f"{name_second:^8}{'':8}{'':8}")
 # print(f"{'':8}{'':8}{name_third:^8}")
 # print(f"{'II':^8}{'I':^8}{'III':^8}")
-from math import sqrt
+# from math import sqrt
+#
+# a = 3.5
+# b = -2.4
+# c = -7.3
+#
+# if a == 0:
+#     if b == 0 and c == 0:
+#         print('Infinite solutions')
+#     elif b == 0:
+#         print('No solution')
+#     else:
+#         print(f'{(-c / b):.2f}')
+# else:
+#     D = (b ** 2) - 4 * a * c
+#     if D > 0:
+#         x_1 = (-b + sqrt(D)) / (2 * a)
+#         x_2 = (-b - sqrt(D)) / (2 * a)
+#         print(f'{min(float(x_1), float(x_2)):.2f}', f'{max(float(x_1), float(x_2)):.2f}')
+#     elif D == 0:
+#         x = (-b) / (2 * a)
+#         print(f'{float(x):.2f}')
+#     else:
+#         print("No solution")
 
-a = 3.5
-b = -2.4
-c = -7.3
+a = 6
+b = 3
+c = 4
 
-if a == 0:
-    if b == 0 and c == 0:
-        print('Infinite solutions')
-    elif b == 0:
-        print('No solution')
-    else:
-        print(f'{(-c / b):.2f}')
-else:
-    D = (b ** 2) - 4 * a * c
-    if D > 0:
-        x_1 = (-b + sqrt(D)) / (2 * a)
-        x_2 = (-b - sqrt(D)) / (2 * a)
-        print(f'{min(float(x_1), float(x_2)):.2f}', f'{max(float(x_1), float(x_2)):.2f}')
-    elif D == 0:
-        x = (-b) / (2 * a)
-        print(f'{float(x):.2f}')
-    else:
-        print("No solution")
+if a ** 2 > b ** 2 + c ** 2:
+    print("велика")
+elif b ** 2 > a ** 2 + c ** 2:
+    print('велика')
+elif c ** 2 > a ** 2 + b ** 2:
+    print('велика')
+elif a ** 2 == b ** 2 + c ** 2:
+    print("100%")
+elif b ** 2 == a ** 2 + c ** 2:
+    print('100%')
+elif c ** 2 == a ** 2 + b ** 2:
+    print('100%')
+elif a ** 2 < b ** 2 + c ** 2:
+    print('крайне мала')
+elif b ** 2 < a ** 2 + c ** 2:
+    print('крайне мала')
+elif c ** 2 < a ** 2 + b ** 2:
+    print('крайне мала')
