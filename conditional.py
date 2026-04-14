@@ -273,25 +273,46 @@
 #     else:
 #         print("No solution")
 
-a = 6
-b = 3
-c = 4
+# a = 6
+# b = 3
+# c = 4
+#
+# if a ** 2 > b ** 2 + c ** 2:
+#     print("велика")
+# elif b ** 2 > a ** 2 + c ** 2:
+#     print('велика')
+# elif c ** 2 > a ** 2 + b ** 2:
+#     print('велика')
+# elif a ** 2 == b ** 2 + c ** 2:
+#     print("100%")
+# elif b ** 2 == a ** 2 + c ** 2:
+#     print('100%')
+# elif c ** 2 == a ** 2 + b ** 2:
+#     print('100%')
+# elif a ** 2 < b ** 2 + c ** 2:
+#     print('крайне мала')
+# elif b ** 2 < a ** 2 + c ** 2:
+#     print('крайне мала')
+# elif c ** 2 < a ** 2 + b ** 2:
+#     print('крайне мала')
 
-if a ** 2 > b ** 2 + c ** 2:
-    print("велика")
-elif b ** 2 > a ** 2 + c ** 2:
-    print('велика')
-elif c ** 2 > a ** 2 + b ** 2:
-    print('велика')
-elif a ** 2 == b ** 2 + c ** 2:
-    print("100%")
-elif b ** 2 == a ** 2 + c ** 2:
-    print('100%')
-elif c ** 2 == a ** 2 + b ** 2:
-    print('100%')
-elif a ** 2 < b ** 2 + c ** 2:
-    print('крайне мала')
-elif b ** 2 < a ** 2 + c ** 2:
-    print('крайне мала')
-elif c ** 2 < a ** 2 + b ** 2:
-    print('крайне мала')
+from math import sqrt
+
+x = float(input())
+y = float(input())
+
+if x ** 2 + y ** 2 > 100:
+    print('Вы вышли в море и рискуете быть съеденным акулой!')
+else:
+    parabola = ((x + 1) ** 2 - 36) / 4
+
+    danger = (
+            (-7 <= x <= -4 and parabola <= y <= (5 * x + 35) / 3) or
+            (-4 <= x <= 0 and parabola <= y <= 5) or
+            (0 <= x <= 5 and parabola <= y <= sqrt(25 - x ** 2))
+    )
+
+    if danger:
+        print('Опасность! Покиньте зону как можно скорее!')
+    else:
+        print('Зона безопасна. Продолжайте работу.')
