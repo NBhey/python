@@ -15,12 +15,21 @@
 # for num in range(num_1, num_2 + 1):
 #     print(num, end=' ')
 
-num_1 = int(input())
-num_2 = int(input())
+# num_1 = int(input())
+# num_2 = int(input())
+#
+# if num_1 < num_2:
+#     for num in range(num_1, num_2 - 1, -1):
+#         print(num, end=' ')
+# else:
+#     for num in range(num_1, num_2 + 1):
+#         print(num, end=' ')
 
-if num_1 < num_2:
-    for num in range(num_1, num_2 - 1, -1):
-        print(num, end=' ')
-else:
-    for num in range(num_1, num_2 + 1):
-        print(num, end=' ')
+total = 0
+
+while (cost := float(input())) != 0:
+    if cost >= 500:
+        total += cost - cost * 0.1
+    else:
+        total += cost
+print(total)
