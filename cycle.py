@@ -34,11 +34,25 @@
 #         total += cost
 # print(total)
 
+# number_1 = int(input())
+# number_2 = int(input())
+#
+# while number_2 % number_1 != 0:
+#     head_number = number_1
+#     number_1 = number_2 % number_1
+#     number_2 = head_number
+# print(number_1)
+
+
 number_1 = int(input())
 number_2 = int(input())
+
+save_number_1 = number_1
+save_number_2 = number_2
 
 while number_2 % number_1 != 0:
     head_number = number_1
     number_1 = number_2 % number_1
     number_2 = head_number
-print(number_1)
+
+print(save_number_1 * save_number_2 // number_1)
