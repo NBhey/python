@@ -44,15 +44,21 @@
 # print(number_1)
 
 
-number_1 = int(input())
-number_2 = int(input())
+# number_1 = int(input())
+# number_2 = int(input())
+#
+# save_number_1 = number_1
+# save_number_2 = number_2
+#
+# while number_2 % number_1 != 0:
+#     head_number = number_1
+#     number_1 = number_2 % number_1
+#     number_2 = head_number
+#
+# print(save_number_1 * save_number_2 // number_1)
 
-save_number_1 = number_1
-save_number_2 = number_2
+text = input()
+repeat = int(input())
 
-while number_2 % number_1 != 0:
-    head_number = number_1
-    number_1 = number_2 % number_1
-    number_2 = head_number
-
-print(save_number_1 * save_number_2 // number_1)
+for i in range(repeat):
+    print(text)
