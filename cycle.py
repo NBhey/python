@@ -25,11 +25,20 @@
 #     for num in range(num_1, num_2 + 1):
 #         print(num, end=' ')
 
-total = 0
+# total = 0
+#
+# while (cost := float(input())) != 0:
+#     if cost >= 500:
+#         total += cost - cost * 0.1
+#     else:
+#         total += cost
+# print(total)
 
-while (cost := float(input())) != 0:
-    if cost >= 500:
-        total += cost - cost * 0.1
-    else:
-        total += cost
-print(total)
+number_1 = int(input())
+number_2 = int(input())
+
+while number_2 % number_1 != 0:
+    head_number = number_1
+    number_1 = number_2 % number_1
+    number_2 = head_number
+print(number_1)
