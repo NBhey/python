@@ -63,9 +63,27 @@
 # for i in range(repeat):
 #     print(text)
 
-number = int(input())
-result = 1
+# number = int(input())
+# result = 1
+#
+# for i in range(1, number + 1):
+#     result *= i
+# print(result)
 
-for i in range(1, number + 1):
-    result *= i
-print(result)
+x = 0
+y = 0
+
+while (target := input()) != 'СТОП':
+    step = int(input())
+    match target:
+        case 'СЕВЕР':
+            x += step
+        case 'ВОСТОК':
+            y += step
+        case 'ЮГ':
+            x -= step
+        case 'ЗАПАД':
+            y -= step
+
+print(x)
+print(y)
