@@ -57,8 +57,15 @@
 #
 # print(save_number_1 * save_number_2 // number_1)
 
-text = input()
-repeat = int(input())
+# text = input()
+# repeat = int(input())
+#
+# for i in range(repeat):
+#     print(text)
 
-for i in range(repeat):
-    print(text)
+number = int(input())
+result = 1
+
+for i in range(1, number + 1):
+    result *= i
+print(result)
