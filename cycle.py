@@ -97,13 +97,22 @@
 #     number //= 10
 # print(result)
 
-number = int(input())
-result = 0
+# number = int(input())
+# result = 0
+#
+# while number != 0:
+#     last_number = number % 10
+#     if last_number > result:
+#         result = last_number
+#     number //= 10
+#
+# print(result)
 
-while number != 0:
-    last_number = number % 10
-    if last_number > result:
-        result = last_number
-    number //= 10
+start = int(input())
+name = input()
 
-print(result)
+for i in range(start - 1):
+    next_name = input()
+    if name > next_name:
+        name = next_name
+print(name)
