@@ -70,20 +70,29 @@
 #     result *= i
 # print(result)
 
-x = 0
-y = 0
+# x = 0
+# y = 0
+#
+# while (target := input()) != 'СТОП':
+#     step = int(input())
+#     match target:
+#         case 'СЕВЕР':
+#             x += step
+#         case 'ВОСТОК':
+#             y += step
+#         case 'ЮГ':
+#             x -= step
+#         case 'ЗАПАД':
+#             y -= step
+#
+# print(x)
+# print(y)
 
-while (target := input()) != 'СТОП':
-    step = int(input())
-    match target:
-        case 'СЕВЕР':
-            x += step
-        case 'ВОСТОК':
-            y += step
-        case 'ЮГ':
-            x -= step
-        case 'ЗАПАД':
-            y -= step
+number = int(input())
+result = 0
 
-print(x)
-print(y)
+while number > 0:
+    last_digit = number % 10
+    result += last_digit
+    number //= 10
+print(result)
