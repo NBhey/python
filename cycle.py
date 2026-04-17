@@ -88,11 +88,22 @@
 # print(x)
 # print(y)
 
+# number = int(input())
+# result = 0
+#
+# while number > 0:
+#     last_digit = number % 10
+#     result += last_digit
+#     number //= 10
+# print(result)
+
 number = int(input())
 result = 0
 
-while number > 0:
-    last_digit = number % 10
-    result += last_digit
+while number != 0:
+    last_number = number % 10
+    if last_number > result:
+        result = last_number
     number //= 10
+
 print(result)
