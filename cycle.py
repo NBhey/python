@@ -108,14 +108,23 @@
 #
 # print(result)
 
-number = int(input())
-counter = 0
+# number = int(input())
+# counter = 0
+#
+# for divisor in range(1, number + 1):
+#     if number % divisor == 0:
+#         counter += 1
+#
+# if counter == 2:
+#     print('YES')
+# else:
+#     print('NO')
 
-for divisor in range(1, number + 1):
-    if number % divisor == 0:
+repeat = int(input())
+counter = 0
+for i in range(repeat):
+    string = input()
+    if 'зайка' in string:
         counter += 1
 
-if counter == 2:
-    print('YES')
-else:
-    print('NO')
+print(counter)
