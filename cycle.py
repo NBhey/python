@@ -108,11 +108,14 @@
 #
 # print(result)
 
-start = int(input())
-name = input()
+number = int(input())
+counter = 0
 
-for i in range(start - 1):
-    next_name = input()
-    if name > next_name:
-        name = next_name
-print(name)
+for divisor in range(1, number + 1):
+    if number % divisor == 0:
+        counter += 1
+
+if counter == 2:
+    print('YES')
+else:
+    print('NO')
