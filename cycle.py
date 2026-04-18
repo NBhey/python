@@ -120,11 +120,24 @@
 # else:
 #     print('NO')
 
-repeat = int(input())
-counter = 0
-for i in range(repeat):
-    string = input()
-    if 'зайка' in string:
-        counter += 1
+# repeat = int(input())
+# counter = 0
+# for i in range(repeat):
+#     string = input()
+#     if 'зайка' in string:
+#         counter += 1
+#
+# print(counter)
 
-print(counter)
+input_1 = 123454321  # 1234
+copy_input_1 = input_1
+
+palindrome_input_1 = 0
+
+while input_1 != 0:
+    number = input_1 % 10
+    palindrome_input_1 += number
+    palindrome_input_1 *= 10
+    input_1 = input_1 // 10
+
+print(palindrome_input_1 // 10 == copy_input_1)
