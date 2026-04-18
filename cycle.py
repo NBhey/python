@@ -129,15 +129,28 @@
 #
 # print(counter)
 
-input_1 = 123454321  # 1234
-copy_input_1 = input_1
+# input_1 = 123454321  # 1234
+# copy_input_1 = input_1
+#
+# palindrome_input_1 = 0
+#
+# while input_1 != 0:
+#     number = input_1 % 10
+#     palindrome_input_1 += number
+#     palindrome_input_1 *= 10
+#     input_1 = input_1 // 10
+#
+# print(palindrome_input_1 // 10 == copy_input_1)
 
-palindrome_input_1 = 0
 
-while input_1 != 0:
-    number = input_1 % 10
-    palindrome_input_1 += number
-    palindrome_input_1 *= 10
-    input_1 = input_1 // 10
+input_number = 123454321
+result = ''
 
-print(palindrome_input_1 // 10 == copy_input_1)
+while input_number != 0:
+    if input_number % 2 != 0:
+        number = input_number % 10
+        result = str(number) + str(result)
+
+    input_number //= 10
+
+print(result)
