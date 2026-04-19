@@ -142,15 +142,40 @@
 #
 # print(palindrome_input_1 // 10 == copy_input_1)
 
+#
+# input_number = 123454321
+# result = ''
+#
+# while input_number != 0:
+#     if input_number % 2 != 0:
+#         number = input_number % 10
+#         result = str(number) + str(result)
+#
+#     input_number //= 10
+#
+# print(result)
 
-input_number = 123454321
-result = ''
+number = int(input())
+divisor = 2
 
-while input_number != 0:
-    if input_number % 2 != 0:
-        number = input_number % 10
-        result = str(number) + str(result)
+while number != 1:
+    if number % divisor == 0:
 
-    input_number //= 10
+        number //= divisor
+        if number != 1:
+            print(divisor, end=' * ')
+        else:
+            print(divisor, end='')
+    else:
+        divisor += 1
 
-print(result)
+
+def find_average(numbers):
+    summa = 0
+    if len(numbers) == 0:
+        return 0
+    else:
+        for i in numbers:
+            summa += i
+
+    return summa / len(numbers)
