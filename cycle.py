@@ -155,27 +155,45 @@
 #
 # print(result)
 
-number = int(input())
-divisor = 2
+# number = int(input())
+# divisor = 2
+#
+# while number != 1:
+#     if number % divisor == 0:
+#
+#         number //= divisor
+#         if number != 1:
+#             print(divisor, end=' * ')
+#         else:
+#             print(divisor, end='')
+#     else:
+#         divisor += 1
+#
+#
+# def find_average(numbers):
+#     summa = 0
+#     if len(numbers) == 0:
+#         return 0
+#     else:
+#         for i in numbers:
+#             summa += i
+#
+#     return summa / len(numbers)
 
-while number != 1:
-    if number % divisor == 0:
+low = 1
+high = 1000
 
-        number //= divisor
-        if number != 1:
-            print(divisor, end=' * ')
-        else:
-            print(divisor, end='')
+attempt = 1
+
+while attempt <= 10:
+    mid = (low + high) // 2
+    print(mid)
+    answer = input()
+
+    if answer == 'Угадал!':
+        break
+
+    if answer == 'Меньше':
+        high = mid - 1
     else:
-        divisor += 1
-
-
-def find_average(numbers):
-    summa = 0
-    if len(numbers) == 0:
-        return 0
-    else:
-        for i in numbers:
-            summa += i
-
-    return summa / len(numbers)
+        low = mid + 1
