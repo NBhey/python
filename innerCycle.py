@@ -1,7 +1,12 @@
+# size = int(input())
+#
+# for i in range(1, size + 1):
+#     for j in range(1, size + 1):
+#         print(j * i, end=" ")
+#     print(sep='\n')
+
 size = int(input())
-start = 1
 
 for i in range(1, size + 1):
     for j in range(1, size + 1):
-        print(j * i, end=" ")
-    print(sep='\n')
+        print(f'{j} * {i} = {i * j}')
