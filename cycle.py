@@ -180,20 +180,20 @@
 #
 #     return summa / len(numbers)
 
-low = 1
-high = 1000
-
-attempt = 1
-
-while attempt <= 10:
-    mid = (low + high) // 2
-    print(mid)
-    answer = input()
-
-    if answer == 'Угадал!':
-        break
-
-    if answer == 'Меньше':
-        high = mid - 1
-    else:
-        low = mid + 1
+# low = 1
+# high = 1000
+#
+# attempt = 1
+#
+# while attempt <= 10:
+#     mid = (low + high) // 2
+#     print(mid)
+#     answer = input()
+#
+#     if answer == 'Угадал!':
+#         break
+#
+#     if answer == 'Меньше':
+#         high = mid - 1
+#     else:
+#         low = mid + 1
