@@ -4,7 +4,7 @@ def format_expense(expense: dict) -> str:
 
 
 def matches_filters(expense: dict, *, limit: int | float, category: str | None) -> bool:
-    """ Проверяет соответствие расхода категории и лимита"""
+    """Проверяет соответствие расхода категории и лимита"""
     return (category is None or expense['category'] == category) and expense["amount"] >= limit
 
 
@@ -26,7 +26,18 @@ def group_by_category(expenses: list) -> dict[str, float | int]:
     return totals
 
 
-limit = int(input('Введите порог в рублях: '))
+def read_limit() -> int:
+    """Запрашивает у пользователя порог в рублях, повторяя при некорректном вводе"""
+
+    while True:
+        try:
+            return int(input('Введите порог в рублях: '))
+        except ValueError:
+            print('Это не целое число. Попробуйте ещё раз.')
+            print()
+
+
+limit = read_limit()
 
 expenses = [
     {"category": "еда", "amount": 500, "description": "обед в кафе"},
@@ -39,7 +50,9 @@ expenses = [
 
 matched_expenses = filter_expenses(expenses, limit=limit)
 
-if not matched_expenses:
+if not expenses:
+    print('Расходы отсутствуют')
+elif not matched_expenses:
     print('Расходов выше порога не найдено')
 else:
     matched_total = sum(expense['amount'] for expense in matched_expenses)
