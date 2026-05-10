@@ -68,7 +68,9 @@ else:
     print(f'Общая сумма: {matched_total} руб')
     print(f'Выше порога: {(matched_total * 100 / all_total):.2f}% от всех трат')
 
-print('=== Сводка по категориям ===')
-totals = group_by_category(expenses)
-category_summaries = [f'- {category}: {amount} руб' for category, amount in totals.items()]
-print('\n'.join(category_summaries))
+if expenses:
+    print()
+    print('=== Сводка по категориям ===')
+    totals = group_by_category(expenses)
+    category_summaries = [f'- {category}: {amount} руб' for category, amount in totals.items()]
+    print('\n'.join(category_summaries))
