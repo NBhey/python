@@ -34,19 +34,36 @@
 #
 # print(total)
 
-repeat_cycle = int(input())
-repeat_counter = 0
+# repeat_cycle = int(input())
+# repeat_counter = 0
+#
+# rabbit_in_area = True
+# rabbit_counter = 0
+#
+# while repeat_counter != repeat_cycle:
+#     area = input()
+#     if area == 'зайка' and rabbit_in_area:
+#         rabbit_in_area = False
+#         rabbit_counter += 1
+#     if area == 'ВСЁ':
+#         rabbit_in_area = True
+#         repeat_counter += 1
+#
+# print(rabbit_counter)
 
-rabbit_in_area = True
-rabbit_counter = 0
+n = int(input())
 
-while repeat_counter != repeat_cycle:
-    area = input()
-    if area == 'зайка' and rabbit_in_area:
-        rabbit_in_area = False
-        rabbit_counter += 1
-    if area == 'ВСЁ':
-        rabbit_in_area = True
-        repeat_counter += 1
+gcd = int(input())
 
-print(rabbit_counter)
+for _ in range(n - 1):
+    number = int(input())
+
+    a = gcd
+    b = number
+
+    while b != 0:
+        a, b = b, a % b
+
+    gcd = a
+
+print(gcd)
