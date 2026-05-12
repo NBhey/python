@@ -51,19 +51,32 @@
 #
 # print(rabbit_counter)
 
-n = int(input())
+# n = int(input())
+#
+# gcd = int(input())
+#
+# for _ in range(n - 1):
+#     number = int(input())
+#
+#     a = gcd
+#     b = number
+#
+#     while b != 0:
+#         a, b = b, a % b
+#
+#     gcd = a
+#
+# print(gcd)
 
-gcd = int(input())
+sportsmen = int(input())
+start_time = 3
+sportsman = 1
 
-for _ in range(n - 1):
-    number = int(input())
-
-    a = gcd
-    b = number
-
-    while b != 0:
-        a, b = b, a % b
-
-    gcd = a
-
-print(gcd)
+for i in range(sportsmen):
+    for j in range(start_time, -1, -1):
+        if j != 0:
+            print(f'До старта {j} секунд(ы)')
+        else:
+            print(f'Старт {sportsman}!!!')
+    start_time += 1
+    sportsman += 1
