@@ -68,15 +68,33 @@
 #
 # print(gcd)
 
-sportsmen = int(input())
-start_time = 3
-sportsman = 1
+# sportsmen = int(input())
+# start_time = 3
+# sportsman = 1
+#
+# for i in range(sportsmen):
+#     for j in range(start_time, -1, -1):
+#         if j != 0:
+#             print(f'До старта {j} секунд(ы)')
+#         else:
+#             print(f'Старт {sportsman}!!!')
+#     start_time += 1
+#     sportsman += 1
 
-for i in range(sportsmen):
-    for j in range(start_time, -1, -1):
-        if j != 0:
-            print(f'До старта {j} секунд(ы)')
-        else:
-            print(f'Старт {sportsman}!!!')
-    start_time += 1
-    sportsman += 1
+amount_of_children = int(input())
+total = 0
+finally_name = ''
+
+for children in range(amount_of_children):
+    name = input()
+    number = int(input())
+    total_current_number = 0
+    while number != 0:
+        total_current_number += number % 10
+        number //= 10
+
+    if total_current_number >= total:
+        total = total_current_number
+        finally_name = name
+
+print(finally_name)
