@@ -81,20 +81,36 @@
 #     start_time += 1
 #     sportsman += 1
 
-amount_of_children = int(input())
-total = 0
-finally_name = ''
+# amount_of_children = int(input())
+# total = 0
+# finally_name = ''
+#
+# for children in range(amount_of_children):
+#     name = input()
+#     number = int(input())
+#     total_current_number = 0
+#     while number != 0:
+#         total_current_number += number % 10
+#         number //= 10
+#
+#     if total_current_number >= total:
+#         total = total_current_number
+#         finally_name = name
+#
+# print(finally_name)
 
-for children in range(amount_of_children):
-    name = input()
+children_in_group = int(input())
+total = ''
+
+for _ in range(children_in_group):
     number = int(input())
-    total_current_number = 0
+    check_number = 0
     while number != 0:
-        total_current_number += number % 10
+        total_current_number = number % 10
+        if total_current_number > check_number:
+            check_number = total_current_number
         number //= 10
 
-    if total_current_number >= total:
-        total = total_current_number
-        finally_name = name
+    total += str(check_number)
 
-print(finally_name)
+print(total)
