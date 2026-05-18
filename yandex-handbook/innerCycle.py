@@ -99,18 +99,25 @@
 #
 # print(finally_name)
 
-children_in_group = int(input())
-total = ''
+# children_in_group = int(input())
+# total = ''
+#
+# for _ in range(children_in_group):
+#     number = int(input())
+#     check_number = 0
+#     while number != 0:
+#         total_current_number = number % 10
+#         if total_current_number > check_number:
+#             check_number = total_current_number
+#         number //= 10
+#
+#     total += str(check_number)
+#
+# print(total)
 
-for _ in range(children_in_group):
-    number = int(input())
-    check_number = 0
-    while number != 0:
-        total_current_number = number % 10
-        if total_current_number > check_number:
-            check_number = total_current_number
-        number //= 10
-
-    total += str(check_number)
-
-print(total)
+count = int(input())
+print('А', 'Б', 'В')
+for anya in range(1, count - 1):
+    for borya in range(1, count - anya):
+        vova = count - anya - borya
+        print(anya, borya, vova)
